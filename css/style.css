@@ -1,10 +1,8 @@
 body {
-  min-width: 1200px;
-  margin: 0;
-}
-
-.container {
-  margin: 0 auto;
+  width: 1200px;
+  margin: 0 auto;;
+  box-shadow: 0 0 20px -7px black;
+  font-family: PT Sans, Arial, sans-serif;
 }
 
 .main-header {
@@ -13,6 +11,7 @@ body {
 
 .logo {
   position: absolute;
+  z-index: 1000;
   left: 50%;
   margin-left: -68px;
 }
@@ -20,12 +19,15 @@ body {
 .main-nav ul {
   width: 1056px;
   margin: 0 auto;
+  padding: 0;
   list-style: none;
   font-size: 0;
 }
 
 .main-nav li {
   display: inline-block;
+  padding-top: 15px;
+  padding-bottom: 15px;
   width: 128px;
   font-size: 14px;
   line-height: 26px;
@@ -54,4 +56,250 @@ body {
 .main-nav a {
   text-decoration: none;
   color: black;
+}
+
+.landscape-block {
+  position: relative;
+  width: 1200px;
+  height: 508px;
+  background: url(../img/landscape.jpg) no-repeat center;
+  margin-bottom: 62px;
+}
+
+.landscape-block::after {
+  content: "";
+  position: absolute;
+  top: 452px;
+  width: 1200px;
+  height: 57px;
+  background: url(../img/landscape-footer.png) no-repeat center;
+}
+
+.phrase-first-part {
+  position: absolute;
+  left: 506px;
+  top: 76px;
+  display: block;
+  width: 188px;
+  height: 45px;
+  background: url(../img/welcome.png) no-repeat center;
+  font-size: 0;
+}
+
+.phrase-second-part {
+  position: absolute;
+  left: 472px;
+  top: 133px;
+  display: block;
+  width: 256px;
+  height: 30px;
+  background: url(../img/to-the-gorgeous.png) no-repeat center;
+  font-size: 0;
+}
+
+.landscape-name {
+  position: absolute;
+  left: 371px;
+  top: 215px;
+  width: 458px;
+  height: 78px;
+  background: url(../img/sedona.png) no-repeat center;
+  font-size: 0;
+}
+
+.slogan {
+  position: absolute;
+  left: 452px;
+  top: 349px;
+  width: 296px;
+  height: 80px;
+  background: url(../img/slogan.png) no-repeat center;
+  font-size: 0;
+}
+
+.place-discr {
+  width: 455px;
+  margin: 0;
+  margin-left: 380px;
+  margin-bottom: 26px;
+  padding: 0;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.start-of-description {
+  width: 493px;
+  margin: 0;
+  margin-left: 360px;
+  margin-bottom: 56px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages {
+  font-size: 0;
+  margin-bottom: 53px;
+}
+
+.advantages-item {
+  width: 400px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #eeeeee;
+  min-height: 256px;
+}
+
+.advantages-item:first-child,
+.advantages-item:nth-child(2) {
+  width: 1200px;
+}
+
+.advantages-item-wrapper {
+  display: inline-block;
+  width: 400px;
+  min-height: 256px;
+  background-color: #81b3d2;
+  vertical-align: top;
+  color: #ffffff;
+}
+
+.advantages-item-title {
+  width: 158px;
+  margin: 0 auto;
+  margin-top: 46px;
+  margin-bottom: 24px;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.advantages-item-number {
+  width: 60px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 26px;
+}
+
+.advantages-item-description {
+  width: 300px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 57px;
+  text-transform: uppercase;
+}
+
+.advantages-item-pic {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.recomendation {
+  position: relative;
+  display: inline-block;
+  width: 400px;
+  min-height: 330px;
+  background-color: #ffffff;
+}
+
+.apartment::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 162px;
+  width: 75px;
+  height: 72px;
+  background: url(../img/apartment.png) no-repeat center;
+}
+
+.food::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 163px;
+  width: 74px;
+  height: 70px;
+  background: url(../img/food.png) no-repeat center;
+}
+
+.gift::before {
+  content: "";
+  position: absolute;
+  top: 56px;
+  left: 168px;
+  width: 64px;
+  height: 76px;
+  background: url(../img/gift.png) no-repeat center;
+}
+
+.recomendation h2 {
+  margin: 0 auto;
+  margin-top: 160px;
+  margin-bottom: 25px;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.recomendation p {
+  width: 260px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+.question {
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 27px;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.offer {
+  width: 445px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+}
+
+.btn {
+  margin-left: 315px;
+  width: 568px;
+  box-sizing: border-box;
+  padding: 32px 100px;
+  font-size: 21px;
+  line-height: 26px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: none;
+  background-color: #766357;
+  border: none;
+  outline: none;
 }
