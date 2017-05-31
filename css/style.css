@@ -134,13 +134,14 @@ body {
   width: 493px;
   margin: 0;
   margin-left: 360px;
-  margin-bottom: 56px;
+  margin-bottom: 50px;
   padding: 0;
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
+  color: #333333;
 }
 
 .advantages {
@@ -164,17 +165,17 @@ body {
 .advantages-item-wrapper {
   display: inline-block;
   width: 400px;
-  min-height: 256px;
+  height: 256px;
   background-color: #81b3d2;
   vertical-align: top;
   color: #ffffff;
 }
 
 .advantages-item-title {
-  width: 158px;
+  width: 150px;
   margin: 0 auto;
   margin-top: 46px;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
@@ -183,24 +184,67 @@ body {
 }
 
 .advantages-item-number {
-  width: 60px;
+  position: relative;
+  width: 50px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+  color: #333333;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 26px;
+  margin-bottom: 20px;
+}
+
+.advantages-item-number::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 8px;
+  height: 1px;
+  background-color: #333333;
+}
+
+.advantages-item-number::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 40px;
+  width: 8px;
+  height: 1px;
+  background-color: #333333;
+}
+
+.first-number::before {
+  background-color: white;
+}
+
+.first-number::after {
+  background-color: white;
+}
+
+.second-number::before {
+  background-color: white;
+}
+
+.second-number::after {
+  background-color: white;
 }
 
 .advantages-item-description {
-  width: 300px;
+  width: 290px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+  color: #333333;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 57px;
   text-transform: uppercase;
+}
+
+.another-color {
+  color: #ffffff;
 }
 
 .advantages-item-pic {
@@ -258,10 +302,11 @@ body {
 }
 
 .recomendation p {
-  width: 260px;
+  width: 285px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+  color: #333333;
   text-align: center;
   margin: 0 auto;
   text-transform: uppercase;
@@ -282,6 +327,7 @@ body {
   margin: 0 auto;
   margin-bottom: 50px;
   font-size: 14px;
+  color: #333333;
   line-height: 24px;
   text-transform: uppercase;
   font-weight: 400;
@@ -289,17 +335,142 @@ body {
 }
 
 .btn {
+  box-sizing: border-box;
+  text-transform: uppercase;
+  border-radius: none;
+  border: none;
+  outline: none;
+}
+
+.show-form {
   margin-left: 315px;
   width: 568px;
-  box-sizing: border-box;
-  padding: 32px 100px;
+  padding: 32px 100px 27px;
   font-size: 21px;
   line-height: 26px;
   color: #ffffff;
+  font-weight: 700;
+  background-color: #766357;
+}
+
+.main-footer {
+  position: relative;
+}
+
+.footer-wrapper {
+  position: absolute;
+  z-index: 100;
+  top: 473px;
+  font-size: 0;
+  background-color: #fdfdfd;
+  width: 1200px;
+  opacity: 0.9;
+  vertical-align: top;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.map {
+  height: 593px;
+}
+
+.tag {
+  float: left;
+  width: 240px;
+  font-size: 21px;
+  line-height: 26px;
   text-transform: uppercase;
   font-weight: 700;
-  border-radius: none;
-  background-color: #766357;
-  border: none;
-  outline: none;
+  text-align: center;
+  margin-top: 46px;
+  margin-left: 80px;
+  margin-right: 205px;
+}
+
+.social-box {
+  float: left;
+  width: 150px;
+  margin: 0;
+  padding: 0;
+  margin-top: 36px;
+  margin-right: 214px;
+  margin-bottom: 36px;
+  font-size: 0;
+  vertical-align: top;
+}
+
+.social-btn {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 48px;
+  background-color: #81b3d2;
+  margin-right: 6px;
+}
+
+.social-tw::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 15px;
+  width: 17px;
+  height: 15px;
+  background: url(../img/twitter.png) no-repeat center;
+}
+
+.social-fb::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 18px;
+  width: 10px;
+  height: 19px;
+  background: url(../img/fb.png) no-repeat center;
+}
+
+.social-yt::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 13px;
+  width: 20px;
+  height: 16px;
+  background: url(../img/youtube.png) no-repeat center;
+}
+
+
+.social-btn:last-child {
+  margin-right: 0;
+}
+
+.creators {
+  float: left;
+  width: 240px;
+  font-size: 0;
+  margin-top: 40px;
+}
+
+.creators span {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 39px;
+  color: black;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-left: 15px;
+  margin-right: 8px;
+  vertical-align: bottom;
+}
+
+.creators a {
+  font-size: 0;
+  display: inline-block;
+  width: 113px;
+  height: 39px;
+  background: url(../img/html-acad.png) no-repeat center;
+  line-height: 39px;
 }
