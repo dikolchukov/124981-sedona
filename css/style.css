@@ -1,8 +1,9 @@
 body {
   width: 1200px;
-  margin: 0 auto;;
+  margin: 0 auto;
   box-shadow: 0 0 20px -7px black;
   font-family: PT Sans, Arial, sans-serif;
+  position: relative;
 }
 
 .main-header {
@@ -473,4 +474,129 @@ body {
   height: 39px;
   background: url(../img/html-acad.png) no-repeat center;
   line-height: 39px;
+}
+
+.modal-box {
+  position: absolute;
+  bottom: 182px;
+  left: 315px;
+  box-sizing: border-box;
+  width: 568px;
+  background-color: #ffffff;
+  padding: 55px;
+  font-size: 0;
+}
+
+.modal-box label {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.check-in input {
+  box-sizing: border-box;
+  width: 346px;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+  border: none;
+  margin-left: 22px;
+  margin-bottom: 30px;
+}
+
+.check-out input {
+  box-sizing: border-box;
+  width: 346px;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+  border: none;
+  margin-left: 18px;
+  margin-bottom: 30px;
+}
+
+.adults input,
+.kids input {
+  box-sizing: border-box;
+  width: 38px;
+  height: 38px;
+  padding: 12px 15px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.minus-btn,
+.plus-btn {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  margin: 0;
+  border: none;
+  outline: none;
+  background-color: #f2f2f2;
+  text-indent: -9999px;
+}
+
+.minus-btn::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 13px;
+  width: 12px;
+  height: 3px;
+  background: url(../img/minus.png) no-repeat center;
+}
+
+.plus-btn::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 13px;
+  width: 11px;
+  height: 11px;
+  background: url(../img/plus.png) no-repeat center;
+}
+
+.adults,
+.kids {
+  display: inline-block;
+}
+
+.adults label {
+  margin-right: 39px;
+}
+
+.adults {
+  margin-right: 53px;
+}
+
+.kids label {
+  margin-right: 25px;
+}
+
+.find-hotel {
+  box-sizing: border-box;
+  width: 458px;
+  padding: 17px 150px;
+  background-color: #81b3d2;
+  margin-top: 54px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #ffffff;
 }
