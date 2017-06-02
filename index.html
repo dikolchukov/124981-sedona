@@ -114,17 +114,19 @@
     <footer class="main-footer">
       <div class="map">
         <img src="img/map.jpg" width="1200" height="593">
+        <iframe class="interactive-map"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d618303.969468494!2d-112.15901935635415!3d34.934905419329844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1496397109031" width="1200" height="593" style="border:0" allowfullscreen>
+        </iframe>
       </div>
       <div class="footer-wrapper clearfix">
         <div class="tag">#visitsedona</div>
         <div class="social-box">
-          <a href="#" class="social-btn social-tw">Twitter</a>
-          <a href="#" class="social-btn social-fb">Facebook</a>
-          <a href="#" class="social-btn social-yt">YouTube</a>
+          <a href="#" class="social-btn social-tw"><i></i>Twitter</a>
+          <a href="#" class="social-btn social-fb"><i></i>Facebook</a>
+          <a href="#" class="social-btn social-yt"><i></i>YouTube</a>
         </div>
         <div class="creators">
           <span>Website by</span>
-          <a href="#">HTML Academy</a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
         </div>
       </div>
     </footer>
@@ -133,15 +135,17 @@
         <div class="check-in">
           <label for="date-of-check-in">Дата заезда:</label>
           <input type="text" id="date-of-check-in" value="24 апреля 2017">
+          <i class="calendar-input"></i>
         </div>
         <div class="check-out">
           <label for="date-of-check-out">Дата выезда:</label>
           <input type="text" id="date-of-check-out" value="4 июля 2017">
+          <i class="calendar-output"></i>
         </div>
         <div class="adults">
           <label for="amount-of-adults">Взрослые:</label>
           <button type="button" class="minus-btn">-</button>
-          <input type="text" id="amount-of-adults" value="0">
+          <input type="text" id="amount-of-adults" value="2">
           <button type="button" class="plus-btn">+</button>
         </div>
         <div class="kids">
@@ -153,5 +157,7 @@
         <button class="btn find-hotel" type="submit">Найти</button>
       </form>
     </div>
+    <script src="js/scripts.js">
+    </script>
   </body>
 </html>

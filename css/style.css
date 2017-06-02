@@ -1,7 +1,7 @@
 body {
   width: 1200px;
   margin: 0 auto;
-  box-shadow: 0 0 20px -7px black;
+  box-shadow: 0 0 30px -10px black;
   font-family: PT Sans, Arial, sans-serif;
   position: relative;
 }
@@ -29,7 +29,7 @@ body {
   display: inline-block;
   padding-top: 15px;
   padding-bottom: 15px;
-  width: 128px;
+  width: 240px;
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
@@ -38,18 +38,11 @@ body {
   text-align: left;
 }
 
-.main-nav li:first-child {
-  margin-right: 112px;
-}
-
 .main-nav li:nth-child(2) {
-  margin-right: 360px;
+  margin-right: 96px;
 }
 
-.main-nav li:nth-child(3) {
-  margin-right: 72px;
-}
-
+.main-nav li:nth-child(3),
 .main-nav li:last-child {
   text-align: right;
 }
@@ -57,6 +50,14 @@ body {
 .main-nav a {
   text-decoration: none;
   color: black;
+}
+
+.main-nav a:hover {
+  color: #81b3d2;
+}
+
+.main-nav a:active {
+  color: rgba(0,0,0,0.3);
 }
 
 .landscape-block {
@@ -341,6 +342,7 @@ body {
   border-radius: none;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 .show-form {
@@ -352,6 +354,15 @@ body {
   color: #ffffff;
   font-weight: 700;
   background-color: #766357;
+}
+
+.show-form:hover {
+  background-color: #604e43;
+}
+
+.show-form:active {
+  background-color: #503e33;
+  color: rgba(255,255,255,0.3);
 }
 
 .main-footer {
@@ -377,6 +388,13 @@ body {
 
 .map {
   height: 593px;
+}
+
+.interactive-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 .tag {
@@ -413,8 +431,15 @@ body {
   margin-right: 6px;
 }
 
-.social-tw::before {
-  content: "";
+.social-btn:hover {
+  background-color: #669ec0;
+}
+
+.social-btn:active {
+  background-color: #5496bd;
+}
+
+.social-tw i {
   position: absolute;
   top: 17px;
   left: 15px;
@@ -423,8 +448,7 @@ body {
   background: url(../img/twitter.png) no-repeat center;
 }
 
-.social-fb::before {
-  content: "";
+.social-fb i {
   position: absolute;
   top: 13px;
   left: 18px;
@@ -433,7 +457,19 @@ body {
   background: url(../img/fb.png) no-repeat center;
 }
 
-.social-yt::before {
+.social-tw:active i {
+  opacity: 0.3;
+}
+
+.social-fb:active i {
+  opacity: 0.3;
+}
+
+.social-yt:active i {
+  opacity: 0.3;
+}
+
+.social-yt i {
   content: "";
   position: absolute;
   top: 16px;
@@ -476,15 +512,32 @@ body {
   line-height: 39px;
 }
 
+.creators a:hover {
+  background: url(../img/html-acad-hover.png) no-repeat center;
+}
+
+.creators a:active {
+  background: url(../img/html-acad-active.png) no-repeat center;
+}
+
 .modal-box {
+  display: none;
   position: absolute;
-  bottom: 182px;
+  bottom: 193px;
   left: 315px;
   box-sizing: border-box;
   width: 568px;
   background-color: #ffffff;
   padding: 55px;
   font-size: 0;
+  box-shadow: 0 3px 20px -7px black;
+  z-index: 2000;
+}
+
+.modal-box-show {
+  display: block;
+  animation-name: moving;
+  animation-duration: 1s;
 }
 
 .modal-box label {
@@ -495,7 +548,12 @@ body {
   text-transform: uppercase;
 }
 
+.check-in {
+  position: relative;
+}
+
 .check-in input {
+  position: relative;
   box-sizing: border-box;
   width: 346px;
   padding: 12px;
@@ -507,10 +565,15 @@ body {
   background-color: #f2f2f2;
   border: none;
   margin-left: 22px;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
+}
+
+.check-out {
+  position: relative;
 }
 
 .check-out input {
+  position: relative;
   box-sizing: border-box;
   width: 346px;
   padding: 12px;
@@ -522,7 +585,35 @@ body {
   background-color: #f2f2f2;
   border: none;
   margin-left: 18px;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
+}
+
+.calendar-input {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 21px;
+  height: 22px;
+  background: url(../img/calendar.png) no-repeat center;
+}
+
+.calendar-output {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 21px;
+  height: 22px;
+  background: url(../img/calendar.png) no-repeat center;
+}
+
+.calendar-input:hover,
+.calendar-output:hover {
+  background: url(../img/calendar-hover.png) no-repeat center;
+}
+
+.calendar-input:active,
+.calendar-output:active {
+  background: url(../img/calendar-active.png) no-repeat center;
 }
 
 .adults input,
@@ -540,6 +631,27 @@ body {
   border: none;
 }
 
+.modal-box input:hover {
+  background-color: #ebebeb;
+}
+
+.modal-box input:focus {
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+  outline: none;
+}
+
+.check-in input:focus,
+.check-out input:focus {
+  padding: 10px;
+}
+
+.adults input:focus,
+.kids input:focus {
+  padding: 10px 13px;
+}
+
 .minus-btn,
 .plus-btn {
   position: relative;
@@ -550,6 +662,7 @@ body {
   outline: none;
   background-color: #f2f2f2;
   text-indent: -9999px;
+  cursor: pointer;
 }
 
 .minus-btn::before {
@@ -560,6 +673,22 @@ body {
   width: 12px;
   height: 3px;
   background: url(../img/minus.png) no-repeat center;
+}
+
+.minus-btn:hover::before {
+  background: url(../img/minus-hover.png) no-repeat center;
+}
+
+.minus-btn:active::before {
+  background: url(../img/minus-active.png) no-repeat center;
+}
+
+.plus-btn:hover::before {
+  background: url(../img/plus-hover.png) no-repeat center;
+}
+
+.plus-btn:active::before {
+  background: url(../img/plus-active.png) no-repeat center;
 }
 
 .plus-btn::before {
@@ -582,7 +711,7 @@ body {
 }
 
 .adults {
-  margin-right: 53px;
+  margin-right: 56px;
 }
 
 .kids label {
@@ -599,4 +728,24 @@ body {
   line-height: 26px;
   font-weight: 700;
   color: #ffffff;
+}
+
+.find-hotel:hover {
+  background-color: #669ec0;
+}
+
+.find-hotel:active {
+  background-color: #5496bd;
+  color: rgba(255,255,255,0.3);
+  box-shadow: inset 0 0 5px -2px black;
+}
+
+@keyframes moving {
+  0% {
+    transform: translateY(500px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
