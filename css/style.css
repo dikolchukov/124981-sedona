@@ -174,7 +174,7 @@ body {
 }
 
 .advantages-item-title {
-  width: 150px;
+  width: 160px;
   margin: 0 auto;
   margin-top: 46px;
   margin-bottom: 30px;
@@ -327,7 +327,7 @@ body {
 .offer {
   width: 445px;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
   font-size: 14px;
   color: #333333;
   line-height: 24px;
@@ -349,6 +349,7 @@ body {
   margin-left: 315px;
   width: 568px;
   padding: 32px 100px 27px;
+  font-family: PT Sans, Arial, sans-serif;
   font-size: 21px;
   line-height: 26px;
   color: #ffffff;
@@ -534,6 +535,10 @@ body {
   z-index: 2000;
 }
 
+.modal-box form {
+  font-family: PT Sans, Arial, sans-serif;
+}
+
 .modal-box-show {
   display: block;
   animation-name: moving;
@@ -591,7 +596,7 @@ body {
 .calendar-input {
   position: absolute;
   top: 10px;
-  right: 15px;
+  right: 12px;
   width: 21px;
   height: 22px;
   background: url(../img/calendar.png) no-repeat center;
@@ -600,7 +605,7 @@ body {
 .calendar-output {
   position: absolute;
   top: 10px;
-  right: 15px;
+  right: 12px;
   width: 21px;
   height: 22px;
   background: url(../img/calendar.png) no-repeat center;
@@ -663,6 +668,7 @@ body {
   background-color: #f2f2f2;
   text-indent: -9999px;
   cursor: pointer;
+  vertical-align: top;
 }
 
 .minus-btn::before {
@@ -704,6 +710,7 @@ body {
 .adults,
 .kids {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .adults label {
@@ -748,4 +755,17 @@ body {
   100% {
     transform: translateY(0);
   }
+}
+
+.main-nav .current-menu-item {
+  color: #766357;
+  cursor: default;
+}
+
+.main-nav .current-menu-item:hover {
+  color: #766357;
+}
+
+.main-nav .current-menu-item:active {
+  color: #766357;
 }

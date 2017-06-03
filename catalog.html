@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона - Каталог</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="main-header">
+      <a href="index.html"><img class="logo" src="img/logo.png" width="138" height="70"></a>
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <a href="#">Информация</a>
+          </li>
+          <li>
+            <a href="#">Фото и видео</a>
+          </li>
+          <li>
+            <a href="#">Карта штата</a>
+          </li>
+          <li>
+            <a class="current-menu-item">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form class="filter-block">
+        <div class="filter-infrastructure">
+          <h2>Инфраструктура:</h2>
+          <div class="filter-item">
+            <input class="filter-checkbox" type="checkbox" name="pool" id="filter-chbox-1" checked>
+            <label for="filter-chbox-1">Бассейн</label>
+          </div>
+          <div class="filter-item">
+            <input class="filter-checkbox" type="checkbox" name="parking" id="filter-chbox-2">
+            <label for="filter-chbox-2">Парковка</label>
+          </div>
+          <div class="filter-item">
+            <input class="filter-checkbox" type="checkbox" name="wi-fi" id="filter-chbox-3">
+            <label for="filter-chbox-1">Wi-Fi</label>
+          </div>
+        </div>
+        <div class="filter-type-of-hotel">
+          <h2>Тип жилья:</h2>
+          <div class="filter-item">
+            <input class="filter-checkbox" type="checkbox" name="hotel" id="filter-chbox-4" checked>
+            <label for="filter-chbox-4">Гостиница</label>
+          </div>
+          <div class="filter-item">
+            <input class="filter-checkbox" type="checkbox" name="motel" id="filter-chbox-5" checked>
+            <label for="filter-chbox-5">Мотель</label>
+          </div>
+          <div class="filter-item">
+            <input class="filter-checkbox" type="checkbox" name="apartments" id="filter-chbox-6" checked>
+            <label for="filter-chbox-6">Апартаменты</label>
+          </div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
