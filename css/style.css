@@ -757,15 +757,67 @@ body {
   }
 }
 
-.main-nav .current-menu-item {
+.main-nav .current-menu-item,
+.main-nav .current-menu-item:hover,
+.main-nav .current-menu-item:active {
   color: #766357;
   cursor: default;
 }
 
-.main-nav .current-menu-item:hover {
-  color: #766357;
+.filter-block {
+  box-sizing: border-box;
+  min-height: 217px;
+  width: 1200px;
+  padding: 0 73px;
+  background: url(../img/filter-background.jpg) no-repeat 0 -60px;
+  color: #ffffff;
 }
 
-.main-nav .current-menu-item:active {
-  color: #766357;
+.filter-block h2 {
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+  margin-top: 30px;
+}
+
+.filter-item label {
+  position: relative;
+  padding-left: 40px;
+}
+
+.filter-item label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background: url("../img/empty-box.png") no-repeat center;
+}
+
+ .filter-checkbox:checked + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 22px;
+  background: url("../img/checked-box.png") no-repeat center;
+}
+
+.filter-infrastructure {
+  float: left;
+  width: 241px;
+}
+
+.filter-type-of-hotel {
+  float: left;
+  width: 288px;
+}
+
+.filter-price-per-day {
+  float: right;
+  width: 328px;
 }

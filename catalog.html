@@ -27,40 +27,50 @@
       </nav>
     </header>
     <main>
-      <form class="filter-block">
+      <form class="filter-block clearfix">
         <div class="filter-infrastructure">
           <h2>Инфраструктура:</h2>
           <div class="filter-item">
-            <input class="filter-checkbox" type="checkbox" name="pool" id="filter-chbox-1" checked>
+            <input class="filter-checkbox" type="checkbox" name="pool" id="filter-chbox-1" checked hidden>
             <label for="filter-chbox-1">Бассейн</label>
           </div>
           <div class="filter-item">
-            <input class="filter-checkbox" type="checkbox" name="parking" id="filter-chbox-2">
+            <input class="filter-checkbox" type="checkbox" name="parking" id="filter-chbox-2" hidden>
             <label for="filter-chbox-2">Парковка</label>
           </div>
           <div class="filter-item">
-            <input class="filter-checkbox" type="checkbox" name="wi-fi" id="filter-chbox-3">
-            <label for="filter-chbox-1">Wi-Fi</label>
+            <input class="filter-checkbox" type="checkbox" name="wi-fi" id="filter-chbox-3" hidden>
+            <label for="filter-chbox-3">Wi-Fi</label>
           </div>
         </div>
         <div class="filter-type-of-hotel">
           <h2>Тип жилья:</h2>
           <div class="filter-item">
-            <input class="filter-checkbox" type="checkbox" name="hotel" id="filter-chbox-4" checked>
+            <input class="filter-checkbox" type="checkbox" name="hotel" id="filter-chbox-4" checked hidden>
             <label for="filter-chbox-4">Гостиница</label>
           </div>
           <div class="filter-item">
-            <input class="filter-checkbox" type="checkbox" name="motel" id="filter-chbox-5" checked>
+            <input class="filter-checkbox" type="checkbox" name="motel" id="filter-chbox-5" checked hidden>
             <label for="filter-chbox-5">Мотель</label>
           </div>
           <div class="filter-item">
-            <input class="filter-checkbox" type="checkbox" name="apartments" id="filter-chbox-6" checked>
+            <input class="filter-checkbox" type="checkbox" name="apartments" id="filter-chbox-6" checked hidden>
             <label for="filter-chbox-6">Апартаменты</label>
           </div>
         </div>
-        <div class="price-per-day">
-          <h2>Тип жилья:</h2>
-          <button class="apply-ilters" type="submit">Показать</button>
+        <div class="filter-price-per-day">
+          <h2>Стоимость в сутки (р):</h2>
+          <div clss="price-range">
+            <label>от<input name="price-min" value="0">
+            </label>
+            <label>до<input name="price-max" value="3000">
+            </label>
+          </div>
+          <div class="scale">
+            <div class="bar">
+            </div>
+          </div>
+          <button class="btn apply-ilters" type="submit">Показать</button>
         </div>
       </form>
       <div class="results-of-search">
