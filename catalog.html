@@ -60,7 +60,7 @@
         </div>
         <div class="filter-price-per-day">
           <h2>Стоимость в сутки (р):</h2>
-          <div clss="price-range">
+          <div class="price-range">
             <label>от<input name="price-min" value="0">
             </label>
             <label>до<input name="price-max" value="3000">
@@ -69,19 +69,27 @@
           <div class="scale">
             <div class="bar">
             </div>
+            <div class="bar-contol min-control">
+            </div>
+            <div class="bar-contol max-control">
+            </div>
           </div>
-          <button class="btn apply-ilters" type="submit">Показать</button>
+          <button class="btn apply-filters" type="submit">Показать</button>
         </div>
       </form>
-      <div class="results-of-search">
+      <div class="results-of-search clearfix">
         <h2>Найдено: 3</h2>
-        <nav class="sort">
-          <h2>Сортировка</h2>
-          <button class="srt-btn">По цене</button>
-          <button class="srt-btn">По типу</button>
-          <button class="srt-btn">По рейтингу</button>
-          <button class="increase-btn">По возрастанию</button>
-          <button class="decrease-btn">По убыванию</button>
+        <nav class="sort clearfix">
+          <h2>Сортировка:</h2>
+          <div class="sort-left">
+            <button class="srt-btn current-srt-btn">По цене</button>
+            <button class="srt-btn">По типу</button>
+            <button class="srt-btn">По рейтингу</button>
+          </div>
+          <div class="sort-right">
+            <button class="increase-btn">По возрастанию</button>
+            <button class="decrease-btn current-decrease-btn">По убыванию</button>
+          </div>
         </nav>
       </div>
       <div class="catalog-list">
